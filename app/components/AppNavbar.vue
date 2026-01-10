@@ -154,16 +154,50 @@ onUnmounted(() => {
 }
 
 .nav-link {
+    position: relative;
     color: var(--gray-600);
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
     transition: color 0.3s ease;
+    padding-bottom: 4px;
 }
 
-.nav-link:hover,
-.nav-link.router-link-active {
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
     color: var(--navy-dark);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.router-link-active,
+.nav-link.router-link-exact-active {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.nav-link.router-link-active::after,
+.nav-link.router-link-exact-active::after {
+    width: 100%;
+}
+
+/* Mobile nav active */
+.mobile-nav-link.router-link-active,
+.mobile-nav-link.router-link-exact-active {
+    color: var(--primary-blue);
+    font-weight: 600;
 }
 
 /* Desktop Actions */
