@@ -3,8 +3,7 @@
         <div class="navbar-container">
             <!-- Logo -->
             <NuxtLink to="/" class="logo animate-fade-in">
-                <span class="logo-icon">✦</span>
-                <span class="logo-text">VerboEdu</span>
+                <span class="logo-icon"> <img src="/logo.png" class="w-24 contain" alt="" /> </span>
             </NuxtLink>
 
             <!-- Desktop Navigation -->
