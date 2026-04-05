@@ -451,7 +451,17 @@ const prevStep = () => {
 }
 
 const submitBooking = () => {
-    alert('Booking confirmed! We will contact you shortly.')
+    const number = "919778493428"
+    const text = `*New Demo Class Booking*
+*Student Name:* ${formData.value.name}
+*Email:* ${formData.value.email}
+*Phone:* ${formData.value.phone}
+*Program:* ${selectedCategory.value?.title} > ${selectedSubject.value}
+*Schedule:* ${formatSelectedDate.value} at ${selectedTime.value}
+*Goals:* ${formData.value.goals || 'Not provided'}`
+
+    const url = `https://wa.me/${number}?text=${encodeURIComponent(text)}`
+    window.open(url, '_blank')
 }
 </script>
 
