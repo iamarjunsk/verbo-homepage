@@ -4,7 +4,7 @@
             <!-- Section Header -->
             <div class="section-header" ref="headerRef">
                 <span class="section-label">THE ADVANTAGE</span>
-                <h2 class="section-title">Why Choose VerboEdu?</h2>
+                <h2 class="section-title">Why Choose VERBO?</h2>
                 <p class="section-description">
                     We combine the rigor of personalized attention with the collaborative energy of group learning.
                 </p>
@@ -12,24 +12,8 @@
 
             <!-- Feature Cards -->
             <div class="cards-grid">
-                <!-- Card 1: Expert Faculty -->
+                <!-- Card 1 -->
                 <div class="feature-card card-hover" ref="card1Ref">
-                    <div class="icon-container">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                            <path d="M6 12v5c0 1 2 3 6 3s6-2 6-3v-5" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Expert Faculty</h3>
-                    <p class="card-description">
-                        Learn from the best educators in the field with years of experience in K-12 and competitive
-                        exams.
-                    </p>
-                </div>
-
-                <!-- Card 2: Personalized Attention -->
-                <div class="feature-card card-hover" ref="card2Ref">
                     <div class="icon-container">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -37,28 +21,71 @@
                             <circle cx="12" cy="7" r="4" />
                         </svg>
                     </div>
-                    <h3 class="card-title">Personalized Attention</h3>
+                    <h3 class="card-title">Need-based Customization</h3>
                     <p class="card-description">
-                        Experience 1-on-1 sessions tailored to your unique learning pace, focusing on your specific
-                        strengths and weaknesses.
+                        One-on-one sessions structured entirely around the student's individual capability, learning speed, and specific academic or skill goals.
                     </p>
                 </div>
 
-                <!-- Card 3: Interactive Groups -->
+                <!-- Card 2 -->
+                <div class="feature-card card-hover" ref="card2Ref">
+                    <div class="icon-container">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Verified, Top Tier Educators</h3>
+                    <p class="card-description">
+                        Learn from thoroughly vetted teachers with proven track records.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
                 <div class="feature-card card-hover" ref="card3Ref">
                     <div class="icon-container">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
                         </svg>
                     </div>
-                    <h3 class="card-title">Interactive Groups</h3>
+                    <h3 class="card-title">Real World Application</h3>
                     <p class="card-description">
-                        Join collaborative environments that spark curiosity through peer-to-peer discussion and
-                        project-based learning.
+                        Projects, coding, robotics, and applied learning meant to move beyond rote memorization.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="feature-card card-hover" ref="card4Ref">
+                    <div class="icon-container">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Transparent & Affordable Pricing</h3>
+                    <p class="card-description">
+                        Providing high-quality education globally without imposing a financial strain on families.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="feature-card card-hover" ref="card5Ref">
+                    <div class="icon-container">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Global Reach, Local Approach</h3>
+                    <p class="card-description">
+                        Understanding diverse curriculums and student mentalities worldwide to deliver localized excellence.
                     </p>
                 </div>
             </div>
@@ -73,6 +100,8 @@ const headerRef = ref(null)
 const card1Ref = ref(null)
 const card2Ref = ref(null)
 const card3Ref = ref(null)
+const card4Ref = ref(null)
+const card5Ref = ref(null)
 
 onMounted(() => {
     const observerOptions = {
@@ -93,6 +122,8 @@ onMounted(() => {
     if (card1Ref.value) observer.observe(card1Ref.value)
     if (card2Ref.value) observer.observe(card2Ref.value)
     if (card3Ref.value) observer.observe(card3Ref.value)
+    if (card4Ref.value) observer.observe(card4Ref.value)
+    if (card5Ref.value) observer.observe(card5Ref.value)
 })
 </script>
 

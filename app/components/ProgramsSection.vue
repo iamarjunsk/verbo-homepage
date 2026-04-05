@@ -10,132 +10,7 @@
                 </p>
             </div>
 
-            <!-- Tab Buttons -->
-            <div class="tab-buttons animate-fade-in-up delay-200">
-                <button class="tab-btn" :class="{ active: activeTab === 'personal' }" @click="activeTab = 'personal'">
-                    Personal Tuition
-                </button>
-                <button class="tab-btn" :class="{ active: activeTab === 'group' }" @click="activeTab = 'group'">
-                    Group Classes
-                </button>
-            </div>
-
-            <!-- Tab Content - Comparison Section -->
-            <div class="tab-content animate-fade-in-up delay-300">
-                <!-- Personal Tuition Content -->
-                <Transition name="fade" mode="out-in">
-                    <div v-if="activeTab === 'personal'" key="personal" class="comparison-section">
-                        <div class="comparison-header">
-                            <div class="comparison-icon personal">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                                    <circle cx="12" cy="7" r="4" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="comparison-title">Personal Tuition</h3>
-                                <p class="comparison-subtitle">Dedicated 1-on-1 attention for accelerated learning</p>
-                            </div>
-                        </div>
-                        <div class="comparison-grid">
-                            <div class="merits-card">
-                                <h4 class="card-label merits">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
-                                    Advantages
-                                </h4>
-                                <ul class="feature-list">
-                                    <li>Fully customized curriculum to your learning pace</li>
-                                    <li>Flexible scheduling based on your availability</li>
-                                    <li>Immediate feedback and doubt resolution</li>
-                                    <li>Focused attention on weak areas</li>
-                                    <li>Faster progress and goal achievement</li>
-                                </ul>
-                            </div>
-                            <div class="demerits-card">
-                                <h4 class="card-label demerits">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <line x1="12" y1="8" x2="12" y2="12"></line>
-                                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                                    </svg>
-                                    Considerations
-                                </h4>
-                                <ul class="feature-list">
-                                    <li>Higher investment compared to group classes</li>
-                                    <li>No peer interaction or group dynamics</li>
-                                    <li>May lack competitive motivation</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="best-for">
-                            <strong>Best for:</strong> Students needing focused attention, busy professionals, or those
-                            preparing for competitive exams.
-                        </div>
-                    </div>
-
-                    <!-- Group Classes Content -->
-                    <div v-else key="group" class="comparison-section">
-                        <div class="comparison-header">
-                            <div class="comparison-icon group">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                                    <circle cx="9" cy="7" r="4" />
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="comparison-title">Group Classes</h3>
-                                <p class="comparison-subtitle">Collaborative learning with peer support</p>
-                            </div>
-                        </div>
-                        <div class="comparison-grid">
-                            <div class="merits-card">
-                                <h4 class="card-label merits">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
-                                    Advantages
-                                </h4>
-                                <ul class="feature-list">
-                                    <li>More affordable than personal tuition</li>
-                                    <li>Learn from peers' questions and discussions</li>
-                                    <li>Builds teamwork and communication skills</li>
-                                    <li>Healthy competition motivates progress</li>
-                                    <li>Networking opportunities with like-minded students</li>
-                                </ul>
-                            </div>
-                            <div class="demerits-card">
-                                <h4 class="card-label demerits">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <line x1="12" y1="8" x2="12" y2="12"></line>
-                                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                                    </svg>
-                                    Considerations
-                                </h4>
-                                <ul class="feature-list">
-                                    <li>Fixed schedule may not suit everyone</li>
-                                    <li>Less individual attention from tutor</li>
-                                    <li>Pace set by group, not individual needs</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="best-for">
-                            <strong>Best for:</strong> Students who thrive in social settings, those on a budget, or
-                            learners seeking peer motivation.
-                        </div>
-                    </div>
-                </Transition>
-            </div>
+            <!-- Unified Programs List -->
 
             <!-- Program Cards -->
             <div class="programs-grid">
@@ -166,18 +41,15 @@
 <script setup>
 import { ref, onMounted, h } from 'vue'
 
-const activeTab = ref('personal')
-
 // Icon components
-const IconFoundation = () => h('svg', {
+const IconAcademic = () => h('svg', {
     width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
     'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
 }, [
-    h('path', { d: 'M22 10v6M2 10l10-5 10 5-10 5z' }),
-    h('path', { d: 'M6 12v5c0 1 2 3 6 3s6-2 6-3v-5' })
+    h('path', { d: 'M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20' })
 ])
 
-const IconHighSecondary = () => h('svg', {
+const IconOnline = () => h('svg', {
     width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
     'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
 }, [
@@ -186,16 +58,17 @@ const IconHighSecondary = () => h('svg', {
     h('line', { x1: 12, y1: 17, x2: 12, y2: 21 })
 ])
 
-const IconUniversity = () => h('svg', {
+const IconJRBots = () => h('svg', {
     width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
     'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
 }, [
-    h('path', { d: 'M3 21h18' }),
-    h('path', { d: 'M5 21V7l7-4 7 4v14' }),
-    h('path', { d: 'M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4' })
+    h('rect', { x: 5, y: 10, width: 14, height: 10, rx: 2 }),
+    h('path', { d: 'M12 2v2' }),
+    h('circle', { cx: 12, cy: 6, r: 2 }),
+    h('path', { d: 'M10 14h4' })
 ])
 
-const IconCompetitive = () => h('svg', {
+const IconFoundation = () => h('svg', {
     width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
     'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
 }, [
@@ -203,7 +76,14 @@ const IconCompetitive = () => h('svg', {
     h('path', { d: 'M6 12v5c0 1 2 3 6 3s6-2 6-3v-5' })
 ])
 
-const IconCareer = () => h('svg', {
+const IconLanguage = () => h('svg', {
+    width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
+    'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
+}, [
+    h('path', { d: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z' })
+])
+
+const IconElap = () => h('svg', {
     width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
     'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
 }, [
@@ -211,51 +91,134 @@ const IconCareer = () => h('svg', {
     h('polyline', { points: '17 6 23 6 23 12' })
 ])
 
+const IconMusic = () => h('svg', {
+    width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
+    'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
+}, [
+    h('path', { d: 'M9 18V5l12-2v13' }),
+    h('circle', { cx: 6, cy: 18, r: 3 }),
+    h('circle', { cx: 18, cy: 16, r: 3 })
+])
+
+const IconArt = () => h('svg', {
+    width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
+    'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
+}, [
+    h('circle', { cx: 12, cy: 12, r: 10 }),
+    h('circle', { cx: 7, cy: 10, r: 1 }),
+    h('circle', { cx: 12, cy: 7, r: 1 }),
+    h('circle', { cx: 17, cy: 10, r: 1 }),
+    h('path', { d: 'M17 15s-2 3-5 3-5-3-5-3' })
+])
+
+const IconRobotics = () => h('svg', {
+    width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
+    'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
+}, [
+    h('circle', { cx: 12, cy: 12, r: 3 }),
+    h('path', { d: 'M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z' })
+])
+
+const IconSpace = () => h('svg', {
+    width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
+    'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
+}, [
+    h('path', { d: 'M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z' }),
+    h('path', { d: 'M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z' }),
+    h('path', { d: 'M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0' }),
+    h('path', { d: 'M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5' })
+])
+
 const programs = ref([
     {
         id: 1,
-        title: 'Foundational (K-8)',
-        description: 'Build a strong academic base with personalized attention in core subjects.',
+        title: 'Academic Tuition',
+        description: 'Comprehensive personalized tutoring mapped to school & college curriculum ensuring concept mastery.',
+        image: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=400&h=250&fit=crop',
+        icon: IconAcademic,
+        iconColor: '#2563eb',
+        link: '/programs/academic'
+    },
+    {
+        id: 2,
+        title: 'Online Schooling',
+        description: '1-to-1 live interactive sessions via Verbo Learning Platform. Bringing the school experience home.',
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop',
+        icon: IconOnline,
+        iconColor: '#0d9488',
+        link: '/programs/online'
+    },
+    {
+        id: 3,
+        title: 'JR BOTS (Ages 7 to 10)',
+        description: 'Early exposure to logic and foundational robotics. Making learning playful, engaging, and highly productive.',
+        image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop',
+        icon: IconJRBots,
+        iconColor: '#f59e0b',
+        link: '/programs/jr-bots'
+    },
+    {
+        id: 4,
+        title: 'Foundation Program',
+        description: 'Structured foundational program for students struggling with basic mathematical operations & language literacy.',
         image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=250&fit=crop',
         icon: IconFoundation,
         iconColor: '#2563eb',
         link: '/programs/foundation'
     },
     {
-        id: 2,
-        title: 'Higher Secondary',
-        description: 'Excel in board exams and core science, math, and commerce subjects.',
-        image: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&h=250&fit=crop',
-        icon: IconHighSecondary,
-        iconColor: '#f59e0b',
-        link: '/programs/higher-secondary'
-    },
-    {
-        id: 3,
-        title: 'University Prep',
-        description: 'Navigate university applications and academic entry requirements smoothly.',
-        image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=250&fit=crop',
-        icon: IconUniversity,
-        iconColor: '#0d9488',
-        link: '/programs/university'
-    },
-    {
-        id: 4,
-        title: 'Competitive Exams',
-        description: 'Master SAT, GRE, and GMAT with proven strategic preparation modules.',
-        image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=250&fit=crop',
-        icon: IconCompetitive,
-        iconColor: '#2563eb',
-        link: '/programs/competitive'
-    },
-    {
         id: 5,
-        title: 'Career Growth',
-        description: 'Upskill for the modern workforce with professional business tutoring.',
-        image: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?w=400&h=250&fit=crop',
-        icon: IconCareer,
+        title: 'Language Foundation',
+        description: 'Exclusive curriculum for students showing gaps in reading, writing and grammar. Cultivates linguistic proficiency.',
+        image: 'https://images.unsplash.com/photo-1546410531-bea5114705bd?w=400&h=250&fit=crop',
+        icon: IconLanguage,
+        iconColor: '#8b5cf6',
+        link: '/programs/language'
+    },
+    {
+        id: 6,
+        title: 'ELAP (16 yrs+)',
+        description: 'Effective Learning & Academic Planning to navigate higher education paths, manage time, and optimize studies.',
+        image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=250&fit=crop',
+        icon: IconElap,
         iconColor: '#059669',
-        link: '/programs/career'
+        link: '/programs/elap'
+    },
+    {
+        id: 7,
+        title: 'Music',
+        description: 'Online personalized music classes promoting cognitive development and creativity under professional guidance.',
+        image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=250&fit=crop',
+        icon: IconMusic,
+        iconColor: '#ec4899',
+        link: '/programs/music'
+    },
+    {
+        id: 8,
+        title: 'ARTYX',
+        description: 'Guided artistic exploration for all ages. Enhance creativity via structured online art & design sessions.',
+        image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=400&h=250&fit=crop',
+        icon: IconArt,
+        iconColor: '#f97316',
+        link: '/programs/artyx'
+    },
+    {
+        id: 9,
+        title: 'Robotics',
+        description: 'Real-world problem solving through coding and robotics classes, sparking critical thinking and logic.',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop',
+        icon: IconRobotics,
+        iconColor: '#3b82f6',
+        link: '/programs/robotics'
+    },
+    {
+        id: 10,
+        title: 'Space Education',
+        description: 'Future-focused program enabling young minds to explore astronomy, astrophysics, and cosmic sciences.',
+        image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&h=250&fit=crop',
+        icon: IconSpace,
+        iconColor: '#6366f1',
+        link: '/programs/space'
     }
 ])
 
@@ -580,6 +543,26 @@ onMounted(() => {
 
 .program-card:nth-child(5) {
     transition-delay: 0.5s;
+}
+
+.program-card:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.program-card:nth-child(7) {
+    transition-delay: 0.7s;
+}
+
+.program-card:nth-child(8) {
+    transition-delay: 0.8s;
+}
+
+.program-card:nth-child(9) {
+    transition-delay: 0.9s;
+}
+
+.program-card:nth-child(10) {
+    transition-delay: 1.0s;
 }
 
 .program-card:hover {

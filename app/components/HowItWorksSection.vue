@@ -3,21 +3,19 @@
         <div class="how-it-works-container">
             <!-- Header -->
             <div class="section-header animate-fade-in-up">
-                <h1 class="section-title">How It Works</h1>
+                <h1 class="section-title">How VERBO Works</h1>
                 <p class="section-subtitle">
-                    Embark on a personalized learning journey designed to help you master new skills with ease and
-                    confidence.
+                    A Simple Path to Personalized Learning. We follow a step-by-step approach to ensure every student receives the right guidance, support, and results.
                 </p>
             </div>
 
-            <!-- Steps Timeline -->
+            <!-- Steps Container -->
             <div class="steps-container">
-                <div class="timeline-line"></div>
-
                 <div class="steps-grid">
                     <div v-for="(step, index) in steps" :key="step.id" class="step-item" ref="stepRefs">
                         <div class="step-icon" :style="{ animationDelay: `${index * 150}ms` }">
                             <component :is="step.icon" />
+                            <span class="step-badge">{{ index + 1 }}</span>
                         </div>
                         <h3 class="step-title">{{ step.title }}</h3>
                         <p class="step-description">{{ step.description }}</p>
@@ -32,6 +30,23 @@
 import { ref, onMounted, h } from 'vue'
 
 // Icon components
+const IconInfo = () => h('svg', {
+    width: 28, height: 28, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
+    'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
+}, [
+    h('circle', { cx: 12, cy: 12, r: 10 }),
+    h('line', { x1: 12, y1: 16, x2: 12, y2: 12 }),
+    h('line', { x1: 12, y1: 8, x2: 12.01, y2: 8 })
+])
+
+const IconUser = () => h('svg', {
+    width: 28, height: 28, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
+    'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
+}, [
+    h('path', { d: 'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2' }),
+    h('circle', { cx: 12, cy: 7, r: 4 })
+])
+
 const IconCalendar = () => h('svg', {
     width: 28, height: 28, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
     'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
@@ -40,16 +55,6 @@ const IconCalendar = () => h('svg', {
     h('line', { x1: 16, y1: 2, x2: 16, y2: 6 }),
     h('line', { x1: 8, y1: 2, x2: 8, y2: 6 }),
     h('line', { x1: 3, y1: 10, x2: 21, y2: 10 })
-])
-
-const IconMatch = () => h('svg', {
-    width: 28, height: 28, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
-    'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
-}, [
-    h('circle', { cx: 11, cy: 11, r: 8 }),
-    h('path', { d: 'M21 21l-4.35-4.35' }),
-    h('circle', { cx: 11, cy: 8, r: 2 }),
-    h('path', { d: 'M7 14c0-2 1.5-3 4-3s4 1 4 3' })
 ])
 
 const IconPlan = () => h('svg', {
@@ -62,42 +67,74 @@ const IconPlan = () => h('svg', {
     h('path', { d: 'M16 3.13a4 4 0 0 1 0 7.75' })
 ])
 
-const IconTrophy = () => h('svg', {
+const IconWallet = () => h('svg', {
     width: 28, height: 28, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
     'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
 }, [
-    h('path', { d: 'M6 9H4.5a2.5 2.5 0 0 1 0-5H6' }),
-    h('path', { d: 'M18 9h1.5a2.5 2.5 0 0 0 0-5H18' }),
-    h('path', { d: 'M4 22h16' }),
-    h('path', { d: 'M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22' }),
-    h('path', { d: 'M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22' }),
-    h('path', { d: 'M18 2H6v7a6 6 0 0 0 12 0V2Z' })
+    h('path', { d: 'M21 12V7H5a2 2 0 0 1 0-4h14v4' }),
+    h('path', { d: 'M3 5v14a2 2 0 0 0 2 2h16v-5' }),
+    h('path', { d: 'M18 12a2 2 0 0 0 0 4h4v-4Z' })
+])
+
+const IconApp = () => h('svg', {
+    width: 28, height: 28, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
+    'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
+}, [
+    h('rect', { x: 5, y: 2, width: 14, height: 20, rx: 2 }),
+    h('line', { x1: 12, y1: 18, x2: 12.01, y2: 18 })
+])
+
+const IconChart = () => h('svg', {
+    width: 28, height: 28, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
+    'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
+}, [
+    h('line', { x1: 18, y1: 20, x2: 18, y2: 10 }),
+    h('line', { x1: 12, y1: 20, x2: 12, y2: 4 }),
+    h('line', { x1: 6, y1: 20, x2: 6, y2: 14 })
 ])
 
 const steps = ref([
     {
         id: 1,
-        title: 'Book a Free Demo',
-        description: 'Schedule a complimentary session to explore our platform and meet our educational experts.',
-        icon: IconCalendar
+        title: 'Know Us',
+        description: 'Get introduced to VERBO’s personalized learning approach, expert educators, and unique programs.',
+        icon: IconInfo
     },
     {
         id: 2,
-        title: 'Get Matched',
-        description: 'Our intelligent system pairs you with the perfect educator based on your specific learning needs.',
-        icon: IconMatch
+        title: 'Understand the Student',
+        description: 'We assess your child’s learning level, strengths & challenges, interests and pace.',
+        icon: IconUser
     },
     {
         id: 3,
-        title: 'Personalized Plan',
-        description: 'Receive a custom-tailored curriculum designed to accelerate your unique academic or career path.',
-        icon: IconPlan
+        title: 'Demo Class',
+        description: 'Experience our teaching style, evaluate student engagement, and identify learning needs.',
+        icon: IconCalendar
     },
     {
         id: 4,
-        title: 'Achieve Goals',
-        description: 'Begin your sessions and track your progress as you reach your milestones with expert guidance.',
-        icon: IconTrophy
+        title: 'Customization of Class',
+        description: 'A personalized learning plan tailored to your child’s comfort and pace, and academic goals.',
+        icon: IconPlan
+    },
+    {
+        id: 5,
+        title: 'Flexible Fees',
+        description: 'Choose a plan that suits your needs. We offer flexible and affordable fee structures based on selected courses.',
+        icon: IconWallet
+    },
+    {
+        id: 6,
+        title: 'App Introduction',
+        description: 'Access everything through the VERBO App: track progress, manage schedules, access learning resources.',
+        icon: IconApp
+    },
+    {
+        id: 7,
+        title: 'Regular Assessment & Evaluation',
+        description: 'We ensure continuous improvement through periodic assessments, performance tracking, feedback and updates.',
+        icon: IconChart
     }
 ])
 
@@ -181,42 +218,17 @@ onMounted(() => {
     padding: 40px 0;
 }
 
-/* Timeline Line */
-.timeline-line {
-    display: none;
-    position: absolute;
-    top: 68px;
-    left: 10%;
-    right: 10%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
-    z-index: 1;
-}
-
-@media (min-width: 1024px) {
-    .timeline-line {
-        display: block;
-    }
-}
-
-/* Steps Grid */
+/* Steps Flex Container */
 .steps-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 48px 32px;
 }
 
 @media (min-width: 640px) {
     .steps-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .steps-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 32px;
+        gap: 64px 40px;
     }
 }
 
@@ -225,6 +237,7 @@ onMounted(() => {
     position: relative;
     text-align: center;
     z-index: 2;
+    flex: 0 1 260px;
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease;
@@ -251,8 +264,21 @@ onMounted(() => {
     transition-delay: 0.4s;
 }
 
+.step-item:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.step-item:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.step-item:nth-child(7) {
+    transition-delay: 0.7s;
+}
+
 /* Step Icon */
 .step-icon {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,6 +290,25 @@ onMounted(() => {
     border-radius: 50%;
     box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
     transition: all 0.3s ease;
+}
+
+/* Step Badge Number */
+.step-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #f97316;
+    color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .step-item:hover .step-icon {

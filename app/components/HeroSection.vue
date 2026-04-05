@@ -11,13 +11,13 @@
 
                 <!-- Heading -->
                 <h1 class="hero-title animate-fade-in-up delay-200">
-                    Personalized Success, Group Excellence.
+                    The Best Personalized Learning Platform for Your Child
                 </h1>
 
                 <!-- Description -->
                 <p class="hero-description animate-fade-in-up delay-300">
-                    Expert tutoring for K-12 students through to PSC aspirants. Tailored learning paths designed for
-                    your unique academic goals.
+                    Give your child the learning support they deserve with expert teachers, personalized classes, and future-ready skills. 
+                    At Verbo, students from KG to Grade 12 learn through one-to-one classes designed around their unique learning needs.
                 </p>
 
                 <!-- CTA Buttons -->

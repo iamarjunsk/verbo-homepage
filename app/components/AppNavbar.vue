@@ -11,13 +11,11 @@
                 <NuxtLink to="/programs" class="nav-link link-hover animate-fade-in-down delay-100">Programs</NuxtLink>
                 <NuxtLink to="/how-it-works" class="nav-link link-hover animate-fade-in-down delay-200">How it Works
                 </NuxtLink>
-                <NuxtLink to="/tutors" class="nav-link link-hover animate-fade-in-down delay-300">Tutors</NuxtLink>
                 <NuxtLink to="/about" class="nav-link link-hover animate-fade-in-down delay-400">About</NuxtLink>
             </nav>
 
             <!-- Desktop Actions -->
             <div class="nav-actions">
-                <NuxtLink to="/signin" class="sign-in-link link-hover animate-fade-in-down delay-500">Sign In</NuxtLink>
                 <NuxtLink to="/book" class="btn-primary animate-fade-in-down delay-600">Book Free Class</NuxtLink>
             </div>
 
@@ -35,10 +33,8 @@
                 <nav class="mobile-nav">
                     <NuxtLink to="/programs" class="mobile-nav-link" @click="closeMenu">Programs</NuxtLink>
                     <NuxtLink to="/how-it-works" class="mobile-nav-link" @click="closeMenu">How it Works</NuxtLink>
-                    <NuxtLink to="/tutors" class="mobile-nav-link" @click="closeMenu">Tutors</NuxtLink>
                     <NuxtLink to="/about" class="mobile-nav-link" @click="closeMenu">About</NuxtLink>
                     <div class="mobile-actions">
-                        <NuxtLink to="/signin" class="mobile-sign-in" @click="closeMenu">Sign In</NuxtLink>
                         <NuxtLink to="/book" class="btn-primary" @click="closeMenu">Book Free Class</NuxtLink>
                     </div>
                 </nav>
@@ -212,13 +208,6 @@ onUnmounted(() => {
     }
 }
 
-.sign-in-link {
-    color: var(--gray-700);
-    font-weight: 600;
-    font-size: 15px;
-    text-decoration: none;
-}
-
 .nav-actions .btn-primary {
     padding: 12px 22px;
     font-size: 14px;
@@ -305,16 +294,6 @@ onUnmounted(() => {
     margin-top: 24px;
     padding-top: 24px;
     border-top: 1px solid var(--gray-200);
-}
-
-.mobile-sign-in {
-    display: block;
-    text-align: center;
-    padding: 14px;
-    color: var(--gray-700);
-    font-weight: 600;
-    font-size: 16px;
-    text-decoration: none;
 }
 
 /* Transitions */

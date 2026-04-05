@@ -52,10 +52,7 @@
                         "{{ testimonial.quote }}"
                     </p>
 
-                    <!-- Read Full Story Link -->
-                    <button class="read-story-btn">
-                        Read Full Story
-                    </button>
+
                 </div>
             </div>
         </div>
@@ -72,27 +69,35 @@ const currentSlide = ref(0)
 const testimonials = ref([
     {
         id: 1,
-        name: 'Alex R.',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=faces',
-        achievement: '98% in Math (Calculus)',
+        name: 'Dr. Arun S.',
+        avatar: 'https://ui-avatars.com/api/?name=Arun+S&background=e0f2fe&color=0284c7',
+        achievement: 'Parent of Anika, Grade 8',
         badgeColor: '#2563eb',
-        quote: 'The tutors at VerboEdu helped me break down complex problems into manageable steps. I went from struggling to scoring the highest in my class!'
+        quote: 'We were searching for personalized tuition for our daughter, and Verbo exceeded our expectations. The tutors understand her learning style perfectly, and she has shown remarkable improvement in Math. The flexibility of scheduling is a big plus for us!'
     },
     {
         id: 2,
-        name: 'Priya K.',
-        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=faces',
-        achievement: 'SAT Score: 1550',
-        badgeColor: '#059669',
-        quote: 'The test-taking strategies I learned were game changers. The 1-on-1 focus helped me identify and fix my weak spots in grammar and logic.'
+        name: 'Revathi M.',
+        avatar: 'https://ui-avatars.com/api/?name=Revathi+M&background=fce7f3&color=be185d',
+        achievement: 'Mother of Rahul, Grade 11',
+        badgeColor: '#db2777',
+        quote: 'My son was struggling with Chemistry and Physics. After joining Verbo’s 1-to-1 live classes, his concepts are much clearer, and he feels confident for his board exams. The regular assessments keep us updated on his progress.'
     },
     {
         id: 3,
-        name: 'Marcus T.',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=faces',
-        achievement: 'Career Pivot to Data Science',
-        badgeColor: '#7c3aed',
-        quote: 'I was stuck in a rut. VerboEdu\'s career modules gave me the technical edge I needed to land my dream job in tech. Highly recommended!'
+        name: 'Manoj K.',
+        avatar: 'https://ui-avatars.com/api/?name=Manoj+K&background=fef3c7&color=b45309',
+        achievement: 'Father of Sidharth, Grade 6',
+        badgeColor: '#d97706',
+        quote: 'Verbo’s Robotics program is fantastic! My son looks forward to the sessions every week. He built his first working bot recently, and his logical thinking has improved drastically. It’s an engaging and productive way to learn.'
+    },
+    {
+        id: 4,
+        name: 'Anjali N.',
+        avatar: 'https://ui-avatars.com/api/?name=Anjali+N&background=dcfce7&color=15803d',
+        achievement: 'Parent of Diya, Middle School',
+        badgeColor: '#16a34a',
+        quote: 'We enrolled our daughter in Verbo’s English Language Foundation, and she has started reading fluently within three months! Her vocabulary has improved, and her grammar scores are consistently high now.'
     }
 ])
 
