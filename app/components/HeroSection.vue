@@ -25,7 +25,7 @@
                     <NuxtLink to="/book" class="btn-primary">
                         Book a Free Demo
                     </NuxtLink>
-                    <NuxtLink to="/courses" class="btn-secondary">
+                    <NuxtLink to="/programs" class="btn-secondary">
                         Explore Courses
                     </NuxtLink>
                 </div>

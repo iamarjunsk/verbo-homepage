@@ -1,5 +1,5 @@
 <template>
-    <section class="programs-hero">
+    <section id="programs" class="programs-hero">
         <div class="programs-hero-container">
             <!-- Heading -->
             <div class="hero-header animate-fade-in-up">
@@ -170,7 +170,7 @@ const programs = ref([
         id: 5,
         title: 'Language Foundation',
         description: 'Exclusive curriculum for students showing gaps in reading, writing and grammar. Cultivates linguistic proficiency.',
-        image: 'https://images.unsplash.com/photo-1546410531-bea5114705bd?w=400&h=250&fit=crop',
+        image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400&h=250&fit=crop',
         icon: IconLanguage,
         iconColor: '#8b5cf6',
         link: '/programs/language'

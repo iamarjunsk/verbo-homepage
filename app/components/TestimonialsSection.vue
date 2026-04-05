@@ -69,35 +69,35 @@ const currentSlide = ref(0)
 const testimonials = ref([
     {
         id: 1,
-        name: 'Dr. Arun S.',
-        avatar: 'https://ui-avatars.com/api/?name=Arun+S&background=e0f2fe&color=0284c7',
-        achievement: 'Parent of Anika, Grade 8',
+        name: 'Parent of Ameya',
+        avatar: 'https://ui-avatars.com/api/?name=PO&background=e0f2fe&color=0284c7',
+        achievement: 'Grade 4 Student',
         badgeColor: '#2563eb',
-        quote: 'We were searching for personalized tuition for our daughter, and Verbo exceeded our expectations. The tutors understand her learning style perfectly, and she has shown remarkable improvement in Math. The flexibility of scheduling is a big plus for us!'
+        quote: 'I would like to share my feedback about Verbo Institute. My daughter has been attending online Art, English, and Music classes for the past year, and also attended the Arabic class for 10 days. All the classes are well-organized and engaging, with very supportive teachers. I have seen a clear improvement in her creativity, communication skills, and overall confidence.'
     },
     {
         id: 2,
-        name: 'Revathi M.',
-        avatar: 'https://ui-avatars.com/api/?name=Revathi+M&background=fce7f3&color=be185d',
-        achievement: 'Mother of Rahul, Grade 11',
+        name: 'Parent of Ahmed Rayyan',
+        avatar: 'https://ui-avatars.com/api/?name=PR&background=fce7f3&color=be185d',
+        achievement: 'Class 3 Student',
         badgeColor: '#db2777',
-        quote: 'My son was struggling with Chemistry and Physics. After joining Verbo’s 1-to-1 live classes, his concepts are much clearer, and he feels confident for his board exams. The regular assessments keep us updated on his progress.'
+        quote: 'I am the parent of Ahmed Rayyan. My son studied in Class 3 and our experience with the institute has been very good. The English and Science teachers are excellent and very supportive. I am very happy with the overall learning environment and we would like to continue with this institute.'
     },
     {
         id: 3,
-        name: 'Manoj K.',
-        avatar: 'https://ui-avatars.com/api/?name=Manoj+K&background=fef3c7&color=b45309',
-        achievement: 'Father of Sidharth, Grade 6',
+        name: 'Parent of Johan & Jem',
+        avatar: 'https://ui-avatars.com/api/?name=PJ&background=fef3c7&color=b45309',
+        achievement: 'Grade 6 & Grade 8 Students',
         badgeColor: '#d97706',
-        quote: 'Verbo’s Robotics program is fantastic! My son looks forward to the sessions every week. He built his first working bot recently, and his logical thinking has improved drastically. It’s an engaging and productive way to learn.'
+        quote: 'I am the parent of Johan (grade 6) and Jem (grade 8). The online class was informative and the topics were taught in an easy manner. Each topic was explained with proper details, making it simple to learn. Thank you!'
     },
     {
         id: 4,
-        name: 'Anjali N.',
-        avatar: 'https://ui-avatars.com/api/?name=Anjali+N&background=dcfce7&color=15803d',
-        achievement: 'Parent of Diya, Middle School',
+        name: 'Jensy Sara John',
+        avatar: 'https://ui-avatars.com/api/?name=JS&background=dcfce7&color=15803d',
+        achievement: 'Ras al Khaimah, UAE',
         badgeColor: '#16a34a',
-        quote: 'We enrolled our daughter in Verbo’s English Language Foundation, and she has started reading fluently within three months! Her vocabulary has improved, and her grammar scores are consistently high now.'
+        quote: 'I would like to express my appreciation for the online tuition. The sessions are well-organized, interactive, and easy to follow. The teacher explains concepts clearly and ensures that the students understand the topics thoroughly. Overall, I appreciate the efforts taken by the teachers.'
     }
 ])
 
