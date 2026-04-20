@@ -136,7 +136,7 @@ const programs = ref([
         description: 'Comprehensive personalized tutoring mapped to school & college curriculum ensuring concept mastery.',
         image: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=400&h=250&fit=crop',
         icon: IconAcademic,
-        iconColor: '#2563eb',
+        iconColor: '#15a89c',
         link: '/programs/academic'
     },
     {
@@ -163,7 +163,7 @@ const programs = ref([
         description: 'Structured foundational program for students struggling with basic mathematical operations & language literacy.',
         image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=250&fit=crop',
         icon: IconFoundation,
-        iconColor: '#2563eb',
+        iconColor: '#15a89c',
         link: '/programs/foundation'
     },
     {
@@ -376,7 +376,7 @@ onMounted(() => {
 
 .comparison-icon.personal {
     background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 .comparison-icon.group {
@@ -566,7 +566,7 @@ onMounted(() => {
 }
 
 .program-card:hover {
-    border-color: var(--primary-blue-light);
+    border-color: var(--primary-light);
 }
 
 /* Program Image */
@@ -618,17 +618,17 @@ onMounted(() => {
     width: 100%;
     padding: 10px 16px;
     background: white;
-    color: var(--primary-blue);
+    color: var(--primary);
     font-weight: 600;
     font-size: 13px;
     border-radius: 8px;
-    border: 1.5px solid var(--primary-blue);
+    border: 1.5px solid var(--primary);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .learn-more-btn:hover {
-    background: var(--primary-blue);
+    background: var(--primary);
     color: white;
 }
 </style>

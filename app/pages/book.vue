@@ -334,7 +334,7 @@ const categories = ref([
         title: 'K-12',
         description: 'School curriculum and foundations',
         icon: IconSchool,
-        bgColor: '#eff6ff',
+        bgColor: '#f0fdfa',
         subjects: ['Mathematics', 'Science', 'English', 'Social Studies', 'Hindi']
     },
     {
@@ -342,7 +342,7 @@ const categories = ref([
         title: 'Engineering',
         description: 'Advanced technical subjects',
         icon: IconCode,
-        bgColor: '#eff6ff',
+        bgColor: '#f0fdfa',
         subjects: ['Mathematics', 'Physics', 'Chemistry', 'Computer Science', 'Mechanical Systems', 'Electronics']
     },
     {
@@ -350,7 +350,7 @@ const categories = ref([
         title: 'Entrance Exams',
         description: 'JEE, NEET, and more',
         icon: IconExam,
-        bgColor: '#eff6ff',
+        bgColor: '#f0fdfa',
         subjects: ['JEE Main', 'JEE Advanced', 'NEET', 'CUET', 'SAT', 'GRE', 'GMAT']
     },
     {
@@ -358,7 +358,7 @@ const categories = ref([
         title: 'PSC Coaching',
         description: 'Civil services preparation',
         icon: IconGovernment,
-        bgColor: '#eff6ff',
+        bgColor: '#f0fdfa',
         subjects: ['Prelims', 'Mains', 'Interview Prep', 'Current Affairs', 'Essay Writing']
     }
 ])
@@ -499,7 +499,7 @@ const submitBooking = () => {
 }
 
 .logo-icon {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 .exit-btn {
@@ -551,7 +551,7 @@ const submitBooking = () => {
 }
 
 .step.active .step-circle {
-    background: var(--primary-blue);
+    background: var(--primary);
     color: white;
 }
 
@@ -567,7 +567,7 @@ const submitBooking = () => {
 }
 
 .step.active .step-label {
-    color: var(--primary-blue);
+    color: var(--primary);
     font-weight: 600;
 }
 
@@ -580,7 +580,7 @@ const submitBooking = () => {
 }
 
 .step-line.active {
-    background: var(--primary-blue);
+    background: var(--primary);
 }
 
 @media (max-width: 640px) {
@@ -648,12 +648,12 @@ const submitBooking = () => {
 }
 
 .category-card:hover {
-    border-color: var(--primary-blue-light);
+    border-color: var(--primary-light);
 }
 
 .category-card.selected {
-    border-color: var(--primary-blue);
-    background: #eff6ff;
+    border-color: var(--primary);
+    background: #f0fdfa;
 }
 
 .category-icon {
@@ -664,11 +664,11 @@ const submitBooking = () => {
     align-items: center;
     justify-content: center;
     margin-bottom: 16px;
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 .category-card.selected .category-icon {
-    background: var(--primary-blue) !important;
+    background: var(--primary) !important;
     color: white;
 }
 
@@ -702,7 +702,7 @@ const submitBooking = () => {
 }
 
 .subjects-title .highlight {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 .subjects-grid {
@@ -724,13 +724,13 @@ const submitBooking = () => {
 }
 
 .subject-chip:hover {
-    border-color: var(--primary-blue);
-    color: var(--primary-blue);
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .subject-chip.selected {
-    background: var(--primary-blue);
-    border-color: var(--primary-blue);
+    background: var(--primary);
+    border-color: var(--primary);
     color: white;
 }
 
@@ -811,8 +811,8 @@ const submitBooking = () => {
 }
 
 .cal-nav-btn:hover {
-    border-color: var(--primary-blue);
-    color: var(--primary-blue);
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .calendar-weekdays {
@@ -905,13 +905,13 @@ const submitBooking = () => {
 }
 
 .slot-btn:hover {
-    border-color: var(--primary-blue);
-    color: var(--primary-blue);
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .slot-btn.selected {
-    background: var(--primary-blue);
-    border-color: var(--primary-blue);
+    background: var(--primary);
+    border-color: var(--primary);
     color: white;
 }
 
@@ -979,7 +979,7 @@ const submitBooking = () => {
 .summary-time {
     display: block;
     font-size: 14px;
-    color: var(--primary-blue);
+    color: var(--primary);
     font-weight: 500;
     margin-top: 4px;
 }
@@ -998,7 +998,7 @@ const submitBooking = () => {
 }
 
 .guarantee-card {
-    background: #eff6ff;
+    background: #f0fdfa;
     border-radius: 12px;
     padding: 16px;
     display: flex;
@@ -1008,7 +1008,7 @@ const submitBooking = () => {
 .guarantee-icon {
     width: 36px;
     height: 36px;
-    background: var(--primary-blue);
+    background: var(--primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1101,7 +1101,7 @@ const submitBooking = () => {
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: var(--primary-blue);
+    border-color: var(--primary);
 }
 
 .form-input::placeholder,
@@ -1134,12 +1134,12 @@ const submitBooking = () => {
 .reminder-icon {
     width: 44px;
     height: 44px;
-    background: #dbeafe;
+    background: #ccfbf1;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-blue);
+    color: var(--primary);
     flex-shrink: 0;
 }
 
@@ -1162,7 +1162,7 @@ const submitBooking = () => {
 .change-btn {
     background: none;
     border: none;
-    color: var(--primary-blue);
+    color: var(--primary);
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -1182,7 +1182,7 @@ const submitBooking = () => {
 }
 
 .booking-footer a {
-    color: var(--primary-blue);
+    color: var(--primary);
     font-weight: 600;
     text-decoration: none;
 }

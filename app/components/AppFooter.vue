@@ -115,7 +115,7 @@
 }
 
 .logo-icon {
-    color: var(--primary-blue);
+    color: var(--primary);
     font-size: 22px;
 }
 
@@ -142,7 +142,7 @@
 }
 
 .footer-link:hover {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 /* Social Icons */

@@ -72,7 +72,7 @@ const testimonials = ref([
         name: 'Parent of Ameya',
         avatar: 'https://ui-avatars.com/api/?name=PO&background=e0f2fe&color=0284c7',
         achievement: 'Grade 4 Student',
-        badgeColor: '#2563eb',
+        badgeColor: '#15a89c',
         quote: 'I would like to share my feedback about Verbo Institute. My daughter has been attending online Art, English, and Music classes for the past year, and also attended the Arabic class for 10 days. All the classes are well-organized and engaging, with very supportive teachers. I have seen a clear improvement in her creativity, communication skills, and overall confidence.'
     },
     {
@@ -224,9 +224,9 @@ onMounted(() => {
 }
 
 .nav-btn:hover {
-    border-color: var(--primary-blue);
-    color: var(--primary-blue);
-    background: #eff6ff;
+    border-color: var(--primary);
+    color: var(--primary);
+    background: #edfafa;
 }
 
 /* Testimonials Grid */
@@ -277,7 +277,7 @@ onMounted(() => {
 }
 
 .testimonial-card:hover {
-    border-color: var(--primary-blue-light);
+    border-color: var(--primary-light);
 }
 
 /* Testimonial Header */

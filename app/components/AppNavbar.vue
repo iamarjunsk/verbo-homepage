@@ -127,7 +127,7 @@ onUnmounted(() => {
 }
 
 .logo-icon {
-    color: var(--primary-blue);
+    color: var(--primary);
     font-size: 24px;
 }
 
@@ -165,7 +165,7 @@ onUnmounted(() => {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
     transition: width 0.3s ease;
 }
 
@@ -179,7 +179,7 @@ onUnmounted(() => {
 
 .nav-link.router-link-active,
 .nav-link.router-link-exact-active {
-    color: var(--primary-blue);
+    color: var(--primary);
     font-weight: 600;
 }
 
@@ -191,7 +191,7 @@ onUnmounted(() => {
 /* Mobile nav active */
 .mobile-nav-link.router-link-active,
 .mobile-nav-link.router-link-exact-active {
-    color: var(--primary-blue);
+    color: var(--primary);
     font-weight: 600;
 }
 
@@ -284,7 +284,7 @@ onUnmounted(() => {
 }
 
 .mobile-nav-link:hover {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 .mobile-actions {

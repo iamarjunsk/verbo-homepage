@@ -92,8 +92,8 @@ const program = computed(() => {
 <style scoped>
 /* Base Variables & Utilities */
 :root {
-  --primary-blue: #2563eb;
-  --primary-blue-light: #eff6ff;
+  --primary: #15a89c;
+  --primary-light: #edfafa;
   --navy-dark: #0f172a;
   --gray-50: #f8fafc;
   --gray-100: #f1f5f9;
@@ -145,7 +145,7 @@ const program = computed(() => {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at top center, var(--primary-blue-light), transparent);
+    background: radial-gradient(circle at top center, var(--primary-light), transparent);
     z-index: 1;
 }
 
@@ -160,7 +160,7 @@ const program = computed(() => {
 .badge {
     display: inline-block;
     padding: 8px 16px;
-    background: var(--primary-blue);
+    background: var(--primary);
     color: white;
     border-radius: 30px;
     font-size: 14px;
@@ -195,18 +195,18 @@ const program = computed(() => {
 .btn-primary {
     display: inline-block;
     padding: 14px 28px;
-    background: var(--primary-blue);
+    background: var(--primary);
     color: white;
     font-weight: 600;
     border-radius: 12px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 8px 20px rgba(21, 168, 156, 0.25);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 12px 24px rgba(21, 168, 156, 0.35);
 }
 
 /* Content Sections */
@@ -280,7 +280,7 @@ const program = computed(() => {
 }
 
 .check-icon {
-    color: var(--primary-blue);
+    color: var(--primary);
     flex-shrink: 0;
     margin-top: 2px;
 }
@@ -310,7 +310,7 @@ const program = computed(() => {
 .structured-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
-    border-color: var(--primary-blue-light);
+    border-color: var(--primary-light);
 }
 
 .card-title {
@@ -349,15 +349,15 @@ const program = computed(() => {
     top: 8px;
     width: 6px;
     height: 6px;
-    background: var(--primary-blue);
+    background: var(--primary);
     border-radius: 50%;
 }
 
 .section-footer {
     margin-top: 32px;
     padding: 20px;
-    background: var(--primary-blue-light);
-    color: var(--primary-blue);
+    background: var(--primary-light);
+    color: var(--primary);
     border-radius: 12px;
     font-weight: 600;
     font-size: 15px;
@@ -381,7 +381,7 @@ const program = computed(() => {
 .btn-primary-large {
     display: inline-block;
     padding: 16px 36px;
-    background: var(--primary-blue);
+    background: var(--primary);
     color: white;
     font-weight: 700;
     font-size: 18px;
@@ -392,7 +392,7 @@ const program = computed(() => {
 
 .btn-primary-large:hover {
     transform: scale(1.05);
-    background: #1d4ed8;
+    background: var(--primary-dark);
 }
 
 .not-found {

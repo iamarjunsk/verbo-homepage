@@ -285,10 +285,10 @@ onMounted(() => {
     width: 80px;
     height: 80px;
     margin: 0 auto 24px;
-    background: var(--primary-blue);
+    background: var(--primary);
     color: white;
     border-radius: 50%;
-    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 8px 24px rgba(21, 168, 156, 0.35);
     transition: all 0.3s ease;
 }
 
@@ -313,7 +313,7 @@ onMounted(() => {
 
 .step-item:hover .step-icon {
     transform: scale(1.1);
-    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.45);
+    box-shadow: 0 12px 32px rgba(21, 168, 156, 0.45);
 }
 
 .step-title {

@@ -2,9 +2,9 @@
 
 /* CSS Custom Properties */
 :root {
-    --primary-blue: #2563eb;
-    --primary-blue-dark: #1d4ed8;
-    --primary-blue-light: #3b82f6;
+    --primary: #15a89c;
+    --primary-dark: #107b72;
+    --primary-light: #1cd0c2;
     --navy-dark: #0f172a;
     --navy: #1e293b;
     --gray-50: #f8fafc;
@@ -239,7 +239,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 14px 28px;
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
     color: white;
     font-weight: 600;
     font-size: 15px;
@@ -248,13 +248,13 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 4px 14px rgba(21, 168, 156, 0.3);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-blue-dark);
+    background-color: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 6px 20px rgba(21, 168, 156, 0.4);
 }
 
 .btn-primary:active {
@@ -312,7 +312,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
     transition: width 0.3s ease;
 }
 
@@ -321,7 +321,7 @@ body {
 }
 
 .link-hover:hover {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
 /* Glass Effect */
@@ -333,7 +333,7 @@ body {
 
 /* Gradient Text */
 .gradient-text {
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -353,7 +353,7 @@ body {
 
 .icon-container:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 8px 24px rgba(21, 168, 156, 0.2);
 }
 
 /* Social Icon */
@@ -370,10 +370,10 @@ body {
 }
 
 .social-icon:hover {
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 6px 16px rgba(21, 168, 156, 0.3);
 }
 
 /* Responsive Container */
@@ -429,14 +429,14 @@ body {
     border-radius: 50px;
     font-size: 13px;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: var(--primary);
     letter-spacing: 0.5px;
 }
 
 .badge-icon {
     width: 8px;
     height: 8px;
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
     border-radius: 50%;
     animation: pulse 2s ease-in-out infinite;
 }

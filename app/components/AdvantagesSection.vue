@@ -15,7 +15,7 @@
                 <!-- Card 1 -->
                 <div class="feature-card card-hover" ref="card1Ref">
                     <div class="icon-container">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a89c" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                             <circle cx="12" cy="7" r="4" />
@@ -30,7 +30,7 @@
                 <!-- Card 2 -->
                 <div class="feature-card card-hover" ref="card2Ref">
                     <div class="icon-container">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a89c" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                             <polyline points="22 4 12 14.01 9 11.01" />
@@ -45,7 +45,7 @@
                 <!-- Card 3 -->
                 <div class="feature-card card-hover" ref="card3Ref">
                     <div class="icon-container">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a89c" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="3" width="20" height="14" rx="2" />
                             <line x1="8" y1="21" x2="16" y2="21" />
@@ -61,7 +61,7 @@
                 <!-- Card 4 -->
                 <div class="feature-card card-hover" ref="card4Ref">
                     <div class="icon-container">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a89c" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <line x1="12" y1="1" x2="12" y2="23" />
                             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
@@ -76,7 +76,7 @@
                 <!-- Card 5 -->
                 <div class="feature-card card-hover" ref="card5Ref">
                     <div class="icon-container">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#15a89c" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10" />
                             <line x1="2" y1="12" x2="22" y2="12" />
@@ -168,7 +168,7 @@ onMounted(() => {
     display: inline-block;
     font-size: 13px;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: var(--primary);
     letter-spacing: 1px;
     margin-bottom: 12px;
 }
@@ -242,7 +242,7 @@ onMounted(() => {
 }
 
 .feature-card:hover {
-    border-color: var(--primary-blue-light);
+    border-color: var(--primary-light);
 }
 
 .card-title {
