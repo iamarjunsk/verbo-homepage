@@ -1,270 +1,323 @@
 <template>
-    <section class="hero">
-        <div class="hero-container">
-            <!-- Left Content -->
-            <div class="hero-content">
-                <!-- Badge -->
-                <div class="badge animate-fade-in">
-                    <span class="badge-icon"></span>
-                    <span>PERSONALIZED LEARNING</span>
-                </div>
+    <section class="hero-section">
+        <!-- Background Shapes -->
+        <div class="hero-bg-shapes pointer-events-none">
+            <!-- Teal Ribbon Wave (Pattern layered) -->
+            <svg class="wave-teal" width="100%" height="auto" viewBox="0 0 1440 250" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <!-- Solid light teal base -->
+                <path fill="#f0fdfa" fill-opacity="1"
+                    d="M0,128L60,112C120,96,240,64,360,74.7C480,85,600,139,720,138.7C840,139,960,85,1080,74.7C1200,64,1320,96,1380,112L1440,128L1440,250L1380,250C1320,250,1200,250,1080,250C960,250,840,250,720,250C600,250,480,250,360,250C240,250,120,250,60,250L0,250Z">
+                </path>
 
-                <!-- Heading -->
-                <h1 class="hero-title animate-fade-in-up delay-200">
-                    The Best Personalized Learning Platform for Your Child
+                <!-- Simple dot pattern overlay to simulate the design's ribbon -->
+                <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1.5" fill="var(--primary)" opacity="0.3"></circle>
+                    <path d="M10,8 L14,14 L6,14 Z" fill="none" stroke="var(--primary)" stroke-width="0.5" opacity="0.3">
+                    </path>
+                </pattern>
+
+                <path fill="url(#dots)"
+                    d="M0,128L60,112C120,96,240,64,360,74.7C480,85,600,139,720,138.7C840,139,960,85,1080,74.7C1200,64,1320,96,1380,112L1440,128L1440,250L1380,250C1320,250,1200,250,1080,250C960,250,840,250,720,250C600,250,480,250,360,250C240,250,120,250,60,250L0,250Z">
+                </path>
+            </svg>
+
+            <!-- Main Yellow Wave -->
+            <svg class="wave-yellow" width="100%" height="auto" viewBox="0 0 1440 200" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffd740" fill-opacity="1"
+                    d="M0,96L80,117.3C160,139,320,181,480,181.3C640,181,800,139,960,122.7C1120,107,1280,117,1360,122.7L1440,128L1440,200L1360,200C1280,200,1120,200,960,200C800,200,640,200,480,200C320,200,160,200,80,200L0,200Z">
+                </path>
+            </svg>
+        </div>
+
+
+        <div class="hero-container">
+            <!-- Left Content: Typography -->
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-in-up">
+                    Because Every <span class="highlight">Child Deserves</span><br />
+                    <span class="highlight">Personal Attention</span>
                 </h1>
 
-                <!-- Description -->
-                <p class="hero-description animate-fade-in-up delay-300">
-                    Give your child the learning support they deserve with expert teachers, personalized classes, and future-ready skills. 
-                    At Verbo, students from KG to Grade 12 learn through one-to-one classes designed around their unique learning needs.
-                </p>
+                <h2 class="hero-subtitle animate-fade-in-up delay-100">
+                    The First <span class="highlight">AI-Integrated Individual Learning Platform</span><br />
+                    Built for Every Student's Growth.
+                </h2>
 
-                <!-- CTA Buttons -->
-                <div class="hero-buttons animate-fade-in-up delay-400">
-                    <NuxtLink to="/book" class="btn-primary">
-                        Book a Free Demo
-                    </NuxtLink>
-                    <NuxtLink to="/programs" class="btn-secondary">
-                        Explore Courses
-                    </NuxtLink>
-                </div>
-
-                <!-- Social Proof -->
-                <div class="social-proof animate-fade-in-up delay-500">
-                    <div class="avatar-stack">
-                        <div class="avatar" style="background: linear-gradient(135deg, #60a5fa, #3b82f6);"></div>
-                        <div class="avatar" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6);"></div>
-                        <div class="avatar" style="background: linear-gradient(135deg, #4ade80, #22c55e);"></div>
-                    </div>
-                    <span class="social-text">Joined by <strong>5,000+</strong> students this month</span>
+                <div class="hero-tags animate-fade-in-up delay-200">
+                    <span class="tag">K-12 Academic Tuition</span>
+                    <span class="tag">Online Schooling</span>
+                    <span class="tag">AI & Robotics</span>
+                    <span class="tag">Space Education</span>
+                    <span class="tag">Non Academic Courses</span>
                 </div>
             </div>
 
-            <!-- Right Image -->
+            <!-- Right Content: Student Image -->
             <div class="hero-image-wrapper animate-fade-in-right delay-300">
-                <div class="hero-image-container">
-                    <!-- Main Image -->
-                    <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=500&fit=crop&crop=faces"
-                            alt="Students learning together" />
-                    </div>
+                <!-- Yellow Blob Background -->
+                <div class="yellow-blob"></div>
 
-                    <!-- Floating Badge -->
-                    <div class="verified-badge animate-float">
-                        <div class="verified-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="#22c55e" />
-                                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <div class="verified-content">
-                            <span class="verified-label">Verified Tutors</span>
-                            <span class="verified-text">Expert Checked</span>
-                        </div>
-                    </div>
+                <!-- Student Image -->
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?q=80&w=800&auto=format&fit=crop"
+                        alt="Student Placeholder" class="student-image" />
                 </div>
             </div>
         </div>
-
-        <!-- Background Gradient -->
-        <div class="hero-bg"></div>
     </section>
 </template>
 
-<script setup>
-</script>
-
 <style scoped>
-.hero {
+.hero-section {
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 140px;
+    padding-bottom: 240px;
+    background-color: white;
     overflow: hidden;
-}
-
-@media (min-width: 768px) {
-    .hero {
-        padding-top: 120px;
-        padding-bottom: 80px;
-    }
-}
-
-.hero-container {
-    position: relative;
-    z-index: 10;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 48px;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 24px;
+    min-height: 80vh;
+    display: flex;
     align-items: center;
 }
 
-@media (min-width: 768px) {
-    .hero-container {
-        padding: 0 40px;
-    }
+/* Background SVGs */
+.hero-bg-shapes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.wave-teal {
+    position: absolute;
+    bottom: 30px;
+    /* Sits slightly higher than yellow wave */
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 15vh;
+}
+
+.wave-yellow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 20vh;
+}
+
+.website-url {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    font-size: 15px;
+}
+
+/* Container Layout */
+.hero-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
 }
 
 @media (min-width: 1024px) {
     .hero-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         padding: 0 64px;
     }
 }
 
-/* Hero Content */
+/* Typography Content */
 .hero-content {
-    max-width: 560px;
-}
-
-@media (min-width: 1024px) {
-    .hero-content {
-        max-width: none;
-    }
+    flex: 1;
+    max-width: 700px;
+    z-index: 10;
 }
 
 .hero-title {
-    font-size: 42px;
+    font-size: 38px;
     font-weight: 800;
-    line-height: 1.1;
-    color: var(--navy-dark);
-    margin-top: 24px;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
+    line-height: 1.15;
+    color: var(--navy-dark, #1e293b);
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+}
+
+.hero-title .highlight {
+    color: var(--primary);
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--gray-700, #334155);
+    margin-bottom: 32px;
+}
+
+.hero-subtitle .highlight {
+    color: var(--primary);
+    font-weight: 700;
 }
 
 @media (min-width: 768px) {
     .hero-title {
-        font-size: 52px;
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
     }
 }
 
 @media (min-width: 1024px) {
     .hero-title {
-        font-size: 56px;
+        font-size: 54px;
     }
 }
 
-.hero-description {
-    font-size: 17px;
-    color: var(--gray-600);
-    line-height: 1.7;
-    margin-bottom: 32px;
-    max-width: 440px;
-}
-
-/* CTA Buttons */
-.hero-buttons {
+/* Tags Layout */
+.hero-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-    margin-bottom: 40px;
-}
-
-/* Social Proof */
-.social-proof {
-    display: flex;
     align-items: center;
-    gap: 14px;
 }
 
-.social-text {
-    font-size: 14px;
-    color: var(--gray-500);
+.tag {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
 }
 
-.social-text strong {
-    color: var(--navy-dark);
+/* Add small subtle separators between tags not using borders, but maybe absolute · */
+.tag:not(:last-child)::after {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: var(--primary-light, #99f6e4);
+    border-radius: 50%;
+    margin-left: 16px;
+    vertical-align: middle;
 }
 
-/* Hero Image */
+/* Student Image */
 .hero-image-wrapper {
+    flex: 1;
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-top: 60px;
+    z-index: 5;
 }
 
 @media (min-width: 1024px) {
     .hero-image-wrapper {
-        justify-content: flex-end;
+        margin-top: 0;
     }
 }
 
-.hero-image-container {
-    position: relative;
-    max-width: 500px;
-}
-
-.hero-image {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
-}
-
-.hero-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Verified Badge */
-.verified-badge {
+.yellow-blob {
     position: absolute;
-    bottom: -16px;
-    right: 24px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: white;
-    padding: 12px 18px;
-    border-radius: 14px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-}
-
-@media (min-width: 768px) {
-    .verified-badge {
-        bottom: 24px;
-        right: -20px;
-    }
-}
-
-.verified-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.verified-label {
-    font-size: 11px;
-    color: var(--gray-500);
-}
-
-.verified-text {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--navy-dark);
-}
-
-/* Background */
-.hero-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    width: 500px;
+    height: 550px;
+    background-color: #ffd740;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     z-index: 1;
 }
 
 @media (min-width: 1024px) {
-    .hero-bg {
-        width: 55%;
-        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    .yellow-blob {
+        width: 600px;
+        height: 650px;
+        transform: translate(-10%, -50%);
+    }
+}
+
+.image-container {
+    position: relative;
+    z-index: 2;
+    height: 500px;
+    width: 100%;
+    max-width: 450px;
+    /* We add clip-path or rounded corners just as a fallback placeholder style */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+    .image-container {
+        height: 600px;
+        max-width: 500px;
+    }
+}
+
+.student-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Animations */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 </style>
