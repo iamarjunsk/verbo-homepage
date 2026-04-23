@@ -61,8 +61,8 @@
 
                 <!-- Student Image -->
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?q=80&w=800&auto=format&fit=crop"
-                        alt="Student Placeholder" class="student-image" />
+                    <img src="https://images.unsplash.com/photo-1692269725911-87697c558be1?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Indian Student in Uniform" class="student-image" />
                 </div>
             </div>
         </div>
